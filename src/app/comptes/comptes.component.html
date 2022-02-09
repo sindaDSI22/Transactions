@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="center"><h1>Liste de Transactions</h1></div>
+            <table class="table table-striped">
+                <tr> <th>Id</th><th>Libelle</th> <th>Mot De Passe</th> <th>Solde</th></tr>
+                <tbody *ngFor="let compte of comptes">
+                    <tr >
+                        <td class="table-primary">{{compte.idCompte}}</td>
+                        <td>{{compte.libelle}}</td>
+                        <td>{{compte.MotDePasse}}</td>
+                        <td>{{compte.solde}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerCompte(compte)">Supprimer</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+</div>
+

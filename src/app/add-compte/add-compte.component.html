@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Compte :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Compte</label>
+            <input type="text" [(ngModel)]="newCompte.idCompte" name="idCompte" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Libelle</label>
+            <input type="text" [(ngModel)]="newCompte.libelle" name="libelle" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Mot de passe </label>
+            <input type="number" [(ngModel)]="newCompte.MotDePasse" name="MotDePasse" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Solde </label>
+            <input type="number" [(ngModel)]="newCompte.solde" name="solde" class="form-control">
+        </div>
+       
+        <div class="mt-2">
+            <button type="submit" (click)="addCompte()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+</div>

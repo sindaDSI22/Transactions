@@ -1,0 +1,23 @@
+<div class="container">
+    <br><br>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="center"><h1>Liste de Transactions</h1></div>
+            <br>
+            <table class="table table-striped">
+                <tr> <th>Id</th><th>Montant</th> <th>Compte</th> <th>Date Transaction</th> <th>Descriptif</th> <th>Compte</th> </tr>
+                <tbody *ngFor="let transaction of transactions">
+                    <tr>
+                        <td class="table-primary">{{transaction.idTransaction}}</td>
+                        <td class="table-success">{{transaction.montant}}</td>
+                        <td class="table-danger">{{transaction.compte}}</td>
+                        <td class="table-warning">{{transaction.dateTransaction | date:'dd/MM/yyyy'}}</td>
+                        <td >{{transaction.descriptif}}</td>
+                        <td class="table-info">{{transaction.cpt.libelle}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+</div>
